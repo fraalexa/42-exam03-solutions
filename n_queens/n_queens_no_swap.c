@@ -66,7 +66,5 @@ int main(int ac, char **av)
 	if (n < 4)
 		return 0;
 	int pos[n];
-	for(int i = 0; i < n; i++)
-		pos[i] = 0;
 	recursion_alg(pos, n, 0);
 }
