@@ -2,22 +2,11 @@
 #include <unistd.h>
 #include <stdio.h>
 
-void ft_swap(int *a, int *b)
-{
- 	int tmp;
-	
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
-}
-
 int	under_attack(int *pos, int x)
 {
-	int i = 0;
 	int d;
 
-	
-	while (i < x)
+	for (int i = 0; i < x; i++)
 	{
 		d = x - i;
 		if (pos[i] == pos[x])
@@ -26,7 +15,6 @@ int	under_attack(int *pos, int x)
 			return (0);
 		if (pos[i] == pos[x] + d)
 			return (0);
-		i++;
 	}
 	return (1);
 }
