@@ -48,8 +48,6 @@ void 	back_track(char *s, int len, int *used, char *out, int depth)
 	{
 		if (used[j])
 			continue ;
-		if (j > 0 && s[j] == s[j - 1] && !used[j - 1])
-			continue ;
 		used[j] = 1;
 		out[depth] = s[j];
 		back_track(s, len, used, out, depth + 1);
